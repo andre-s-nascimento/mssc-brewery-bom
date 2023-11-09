@@ -11,9 +11,9 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
-  <groupId>guru.springframework</groupId>
+  <groupId>com.github.andre-s-nascimento</groupId>
   <artifactId>mssc-brewery-bom</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>pom</packaging>
 
   <organization>
@@ -96,8 +96,8 @@
     </dependency>
 
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
       <version>8.0.33</version>
       <scope>runtime</scope>
     </dependency>
@@ -198,8 +198,8 @@
             </configuration>
           </execution>
         </executions>
-
       </plugin>
+
       <plugin>  <!-- Create sources.jar -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -225,6 +225,7 @@
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
 </project>
