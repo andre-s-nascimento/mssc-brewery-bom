@@ -16,14 +16,19 @@
   <version>1.0.1</version>
   <packaging>pom</packaging>
 
+  <name>MSSC BOM</name>
+  <description>A centralized Bill of Materials</description>
+  <url>https://github.com/andre-s-nascimento/mssc-brewery-bom</url>
+
   <organization>
     <name>Spring Framework Guru</name>
   </organization>
 
   <licenses>
     <license>
-      <name>GNU General Public License v3.0</name>
-      <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
     </license>
   </licenses>
 
@@ -33,6 +38,12 @@
       <organization>Spring Framework Guru</organization>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/andre-s-nascimento/mssc-brewery-bom.git</connection>
+    <developerConnection>scm:git:ssh://github.com:andre-s-nascimento/mssc-brewery-bom.git</developerConnection>
+    <url>http://github.com/andre-s-nascimento/mssc-brewery-bom/tree/mvn</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -225,7 +236,19 @@
           </execution>
         </executions>
       </plugin>
-
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
