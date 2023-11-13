@@ -270,8 +270,8 @@
                   <goal>sign</goal>
                 </goals>
                 <configuration>
-                  <keyname>0xB435F3A9</keyname>
-                  <passphraseServerId>0xB435F3A9</passphraseServerId>
+                  <keyname>${gpg.key}</keyname>
+                  <passphraseServerId>${gpg.key}}</passphraseServerId>
                 </configuration>
               </execution>
             </executions>
